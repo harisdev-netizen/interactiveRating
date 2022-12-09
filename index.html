@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Rating state start -->
+      <div id="card-rate">
+        <img src="./images/icon-star.svg" alt="Icon Star" />
+        <div class="text">
+          <h1>How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+
+        <div class="form-rate">
+          <form name="rateForm">
+            <ul class="rate-inputs">
+              <li>
+                <input type="radio" id="one" name="rate" value="1" />
+                <label for="one">1</label>
+              </li>
+
+              <li>
+                <input type="radio" id="two" name="rate" value="2" />
+                <label for="two">2</label>
+              </li>
+
+              <li>
+                <input type="radio" id="three" name="rate" value="3" />
+                <label for="three">3</label>
+              </li>
+
+              <li>
+                <input type="radio" id="four" name="rate" value="4" />
+                <label for="four">4</label>
+              </li>
+
+              <li>
+                <input type="radio" id="five" name="rate" value="5" />
+                <label for="five">5</label>
+              </li>
+            </ul>
+
+            <div class="feedback-area">
+              <p class="form-feedback">Select a value between 1 and 5!</p>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div id="card-thank">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="Thank you illustration"
+        />
+
+        <div class="result">
+          <h2>You selected <span>4</span> out of 5</h2>
+        </div>
+
+        <div class="text">
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+      <!-- Thank you state end -->
+
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.youtube.com/channel/UCfPJ07vvW4CBs6M-vn4ctMQ"
+          target="_blank"
+          >@codingite</a
+        >.
+      </div>
+    </main>
+
+    <script src="./src/js/formRate.js"></script>
+  </body>
+</html>

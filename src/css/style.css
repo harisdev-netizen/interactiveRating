@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  /* Primary */
+  --orange: #fb7413;
+
+  /* Neutral */
+  --white: #ffffff;
+  --light-grey: #959eac;
+  --medium-grey: #7c8798;
+  --dark-blue: #252d37;
+  --very-dark-blue: #121417;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+body p {
+  font-size: 15px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+#card-rate {
+  background: rgb(37, 45, 55);
+  background: linear-gradient(
+    210deg,
+    rgb(37, 45, 55, 0.9) 0%,
+    rgba(32, 42, 54, 0.514) 100%
+  );
+  border-radius: 25px;
+  display: block;
+  min-height: 410px;
+  padding: 32px;
+  width: 400px;
+}
+
+#card-rate img {
+  animation: rotate 1s ease-in;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  padding: 16px;
+}
+
+#card-rate .text {
+  margin: 16px 0;
+}
+
+#card-rate .text h1 {
+  color: var(--white);
+  font-weight: 700;
+}
+
+#card-rate .text p {
+  color: var(--light-grey);
+  margin-top: 12px;
+}
+
+.rate-inputs {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 16px 0 0;
+}
+
+.rate-inputs li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.rate-inputs li label {
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  color: white;
+  padding: 17px 23px;
+  user-select: none;
+}
+
+.rate-inputs li:first-child label {
+  padding: 17px 25px;
+}
+
+.rate-inputs li label:hover {
+  background-color: var(--medium-grey);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rate-inputs li:nth-child(1) label {
+  animation: scaleUpBtn 0.5s ease-in-out, fadein 0.5s ease-in;
+}
+
+.rate-inputs li:nth-child(2) label {
+  animation: scaleUpBtn 0.8s ease-in-out, fadein 0.8s ease-in;
+}
+
+.rate-inputs li:nth-child(3) label {
+  animation: scaleUpBtn 1s ease-in-out, fadein 1s ease-in;
+}
+
+.rate-inputs li:nth-child(4) label {
+  animation: scaleUpBtn 1.1s ease-in-out, fadein 1.1s ease-in;
+}
+
+.rate-inputs li:nth-child(5) label {
+  animation: scaleUpBtn 1.2s ease-in-out, fadein 1.2s ease-in;
+}
+
+.rate-inputs li input[type="radio"]:checked + label {
+  background-color: var(--orange);
+  transition: none;
+}
+
+.rate-inputs li input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+#card-rate .feedback-area {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+#card-rate .form-feedback {
+  color: var(--medium-grey);
+  visibility: hidden;
+}
+
+#card-rate .btn-submit {
+  align-items: center;
+  animation: translateTop 1s ease-in-out, fadein 1.5s ease-in;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 25px;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  outline: none;
+  padding: 12px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#card-rate .btn-submit:hover,
+#card-rate .btn-submit:focus {
+  background-color: var(--white);
+  color: var(--orange);
+  transition: all 0.3s;
+}
+
+#card-thank {
+  background: rgb(37, 45, 55);
+  background: linear-gradient(
+    210deg,
+    rgb(37, 45, 55, 0.9) 0%,
+    rgba(32, 42, 54, 0.514) 100%
+  );
+  border-radius: 25px;
+  display: none;
+  justify-content: center;
+  min-height: 420px;
+  padding: 32px;
+  text-align: center;
+  width: 400px;
+}
+
+#card-thank img {
+  animation: translateTop 1s ease-in-out, fadein 1.5s ease-in;
+  padding: 16px;
+}
+
+#card-thank .result {
+  animation: translateBottom 1s ease-in-out, fadein 1.5s ease-in;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+#card-thank h2 {
+  background-color: var(--dark-blue);
+  border-radius: 25px;
+  color: var(--orange);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 7px;
+  width: 200px;
+}
+
+#card-thank .text {
+  margin-top: 32px;
+}
+
+#card-thank h1 {
+  animation: scaleUp 0.5s ease-in, fadein 1.5s ease-in;
+  color: var(--white);
+  font-weight: 700;
+}
+
+#card-thank p {
+  color: var(--light-grey);
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.attribution {
+  font-size: 11px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--orange);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUpBtn {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes translateBottom {
+  from {
+    transform: translateY(-16px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes translateTop {
+  from {
+    transform: translateY(16px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (width < 400px) {
+  #card-rate,
+  #card-thank {
+    max-width: 90%;
+  }
+
+  .rate-inputs li label {
+    font-size: 14px;
+    padding: 11px 15px;
+  }
+
+  .rate-inputs li:first-child label {
+    padding: 11px 17px;
+  }
+}
